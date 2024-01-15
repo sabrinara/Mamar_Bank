@@ -108,8 +108,7 @@ class WithdrawMoneyView(TransactionCreateMixin):
         if bankrupt and bankrupt.is_bankrupt:
             print("Bank is bankrupt")
             messages.error(
-                self.request,
-                'Withdrawal is not allowed. The bank is bankrupt.'
+                self.request,'Withdrawal is not allowed.Warning: The bank is bankrupt.'
             )
             return redirect(reverse_lazy('withdraw_money'))
 

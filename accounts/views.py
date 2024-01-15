@@ -82,6 +82,6 @@ def change_pass(request):
                 return redirect('profile')
             else:
                 messages.error(request, 'Please correct the error below.')
-        return render(request, 'accounts/form.html', {'form': form, 'title': 'Change Your Password', 'button_text': 'Change Password', 'button_class': 'btn-warning'})
+        return render(request, 'accounts/login.html', {'form': form, 'title': 'Change Your Password', 'button_text': 'Change Password', 'button_class': 'btn-warning'})
     else:
         return redirect('home')  
